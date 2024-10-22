@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <script>
+        const urlToCheck = "https://adixd.duckdns.org";
+
+        fetch(urlToCheck, { method: 'HEAD', mode: 'no-cors' })
+            .then(() => {
+                // Site is up; do nothing or redirect to the main page
+                console.log("adixd.duckdns.org is up");
+            })
+            .catch(() => {
+                // Site is down; redirect to the alternative site
+                window.location.href = "https://adixd.uk";
+            });
+    </script>
+</head>
+<body>
+    <h1>Checking site status...</h1>
+</body>
+</html>
